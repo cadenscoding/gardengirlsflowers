@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdfaf3;   
+  color: #2f4f2f;        
+}
+
+/* ----------------- */
+/* Navbar Styling    */
+/* ----------------- */
+.navbar {
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: #fdfaf3;       
+  gap: 3rem;                 
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  height: 170px;             
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2f4f2f;
+  font-family: "Georgia", serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2f4f2f;            
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1b331b;            
+}
+
+/* ----------------- */
+/* Carousel Styling  */
+/* ----------------- */
+.carousel {
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;             
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out; 
+}
+
+.carousel-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* ----------------- */
+/* Info + Contact    */
+/* ----------------- */
+.info {
+  padding: 2rem;
+  text-align: center;
+  background: #fdfaf3;
+  color: #2f4f2f;
+}
+
+.contact {
+  padding: 3rem 2rem;
+  background: #fdfaf3;
+}
+
+/* Center and style the heading */
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2f4f2f;
+}
+
+/* Contact form card styling */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  margin: auto;
+  background: #fde4ec;            
+  padding: 3rem;                  
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Input groups with icons (icons outside field) */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;          
+  gap: 0.75rem;                   
+}
+
+.input-group .icon {
+  flex-shrink: 0;                 
+  color: #2f4f2f;
+  font-size: 1.3rem;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  flex: 1;                        
+  padding: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  border-color: #2f4f2f;
+  box-shadow: 0 0 6px rgba(47, 79, 47, 0.25);
+  outline: none;
+}
+
+/* Textarea specifics */
+.input-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Select dropdown specifics */
+.input-group select {
+  background: #fff;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Button styling */
+.contact button {
+  padding: 1rem;
+  background: #2f4f2f;  
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact button:hover {
+  background: #1b331b; 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+/* ----------------- */
+/* Footer Styling    */
+/* ----------------- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #fdfaf3;
+  color: #2f4f2f;
+  font-size: 0.9rem;
+}
+
+/* ----------------- */
+/* Responsive Styles */
+/* ----------------- */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 120px;   
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .carousel-image-wrapper {
+    height: 300px;  
+  }
+
+  .contact form {
+    padding: 2rem;
+  }
+}
